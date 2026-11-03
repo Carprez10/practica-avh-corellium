@@ -1,0 +1,2 @@
+$ rebar3 --version
+rebar 3.28.0 on Erlang/OTP 27 Erts 15.2.7.14

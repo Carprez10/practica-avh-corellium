@@ -96,21 +96,26 @@ demasiado antiguo puede fallar al compilar `erts/emulator/.../asmjit`.
 
 ### Solución
 
-Se intentó primero con gcc 10. Si la compilación del JIT falla:
+Se intentó primero con **gcc 10.2.1**, el compilador por defecto de Debian 11.
+El resultado real fue exitoso: gcc 10.2.1 compiló AsmJIT y el JIT quedó activo
+(`emu_flavor = jit`). No fue necesario usar clang ni `--disable-jit`.
+
+El script `scripts/aplicar_gist_avh.sh` dejó preparados dos respaldos por si
+gcc fallaba:
 
 1. Instalar `clang-11` y reintentar con `CC=clang-11 CXX=clang++-11`.
-2. Si aun así falla, compilar con `--disable-jit`. OTP 27 sigue funcionando,
-   pero `emu_flavor` será `emu`.
+2. Compilar con `--disable-jit`. OTP 27 sigue funcionando, pero `emu_flavor`
+   sería `emu`.
 
-El script `scripts/aplicar_gist_avh.sh` intenta JIT y ofrece el respaldo sin
-JIT. El resultado real se documenta en
+El resultado real se documenta en
 [04-aplicacion-gist.md](04-aplicacion-gist.md).
 
 ### Lección
 
-El GIST está verificado en Debian 13. AVH ofrece Debian 11. Esa diferencia de
-compilador es una limitación del entorno, no un error del estudiante, y debe
-documentarse con honestidad.
+La advertencia del GIST (“gcc ≥ 11”) era conservadora: en esta instancia,
+gcc 10.2.1 fue suficiente para compilar el JIT. Aun así, conviene tener un
+plan B. La diferencia entre Debian 11 y Debian 13 no impidió el objetivo
+principal, pero sí obligó a verificar el resultado en lugar de asumirlo.
 
 ---
 

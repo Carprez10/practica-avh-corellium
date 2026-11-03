@@ -211,6 +211,7 @@ Resultado esperado: `true` en ambos casos.
 
 | Verificación | Resultado |
 |---|---|
+| Compilador | gcc 10.2.1 (Debian 11) |
 | `asdf --version` | v0.14.1 (instalado por el script) |
 | OTP Release | 27 |
 | ERTS | 15.2.7.14 |
@@ -220,7 +221,7 @@ Resultado esperado: `true` en ambos casos.
 | `rebar3 --version` | rebar 3.28.0 on Erlang/OTP 27 Erts 15.2.7.14 |
 | `rebar3 compile` en `hello_erlang` | Compilación exitosa |
 | AES-256-GCM | `true` |
-| ChaCha20-Poly1305 | [PENDIENTE: verificar] |
+| ChaCha20-Poly1305 | `true` |
 
 ## 4.5 Evidencia
 

@@ -66,6 +66,19 @@ evidencias/
 | 18 | Log completo | `evidencias/logs/aplicar_gist.log` | ⬜ Pendiente |
 | 19 | Resumen del script | `evidencias/texto/04-resumen-gist.txt` | ✅ Listo |
 
+### Evidencias de texto ya recopiladas
+
+| Evidencia | Archivo | Estado |
+|---|---|---|
+| Versión de Erlang/ERTS | `evidencias/texto/04-erl-version.txt` | ✅ Listo |
+| Versión de rebar3 | `evidencias/texto/04-rebar3-version.txt` | ✅ Listo |
+| AES-256-GCM y ChaCha20 | `evidencias/texto/04-crypto.txt` | ✅ Listo |
+| Compilador gcc | `evidencias/texto/04-gcc.txt` | ✅ Listo |
+| Compilación de `hello_erlang` | `evidencias/texto/04-rebar3-compile.txt` | ✅ Listo |
+| Resumen del GIST | `evidencias/texto/04-resumen-gist.txt` | ✅ Listo |
+
+Las capturas de pantalla siguen pendientes; son la única evidencia que falta.
+
 ## 6.3 Cómo generar las salidas de texto
 
 En la consola de la Pi, dentro del repositorio:

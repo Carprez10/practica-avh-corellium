@@ -74,9 +74,11 @@ El entorno final quedó funcionando sobre:
 | RAM | `free -h` | ~4 GB (3.7 GiB) | 3.7 GiB + 2.1 GiB swap |
 | Sistema | `cat /etc/os-release` | Debian 11 (bullseye) | Debian GNU/Linux 11 (bullseye) |
 | Kernel | `uname -r` | 5.10 | `5.10.92-v8+` |
+| Compilador | `gcc --version` | gcc ≥ 11 según el GIST | gcc 10.2.1 (compiló el JIT) |
 | OTP | `erl -noshell -eval '...'` | 27 | 27 (ERTS 15.2.7.14) |
 | JIT | `erlang:system_info(emu_flavor)` | `jit` | **`jit`** |
 | rebar3 | `rebar3 --version` | 3.x | 3.28.0 on Erlang/OTP 27 Erts 15.2.7.14 |
+| Crypto AES/ChaCha | `crypto:supports(ciphers)` | `true` | `true` / `true` |
 | Proyecto | `rebar3 compile` | `Build successful` | Compilación exitosa |
 
 Las capturas y salidas completas están en [docs/06-evidencias.md](docs/06-evidencias.md).
