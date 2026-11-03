@@ -1,0 +1,22 @@
+===== RESUMEN APLICACIÓN DEL GIST =====
+Fecha: 2026-11-03T07:33:10+00:00
+Equipo: Linux raspberrypi 5.10.92-v8+ #1514 SMP PREEMPT Mon Jan 17 17:39:38 GMT 2022 aarch64 GNU/Linux
+
+Sistema: Debian GNU/Linux 11 (bullseye)
+OTP: 27
+ERTS: 15.2.7.14
+emu_flavor: jit
+Arquitectura: aarch64-unknown-linux-gnu
+Schedulers: 4
+rebar3: rebar 3.28.0 on Erlang/OTP 27 Erts 15.2.7.14
+AES-256-GCM: true
+
+[OK] JIT activo: emu_flavor = jit
+[OK] OTP 27 verificado.
+[OK] Resumen guardado en /home/pi/resumen_gist_avh.txt
+[OK] Log completo en /home/pi/aplicar_gist_avh_20261103-072908.log
+
+Siguientes pasos:
+  1. Copia /home/pi/resumen_gist_avh.txt y /home/pi/aplicar_gist_avh_20261103-072908.log a evidencias/.
+  2. Toma capturas de la consola y del panel de AVH.
+  3. Apaga la instancia al terminar: sudo poweroff

@@ -69,14 +69,15 @@ El entorno final quedó funcionando sobre:
 
 | Verificación | Comando | Resultado esperado | Resultado obtenido |
 |---|---|---|---|
-| Arquitectura | `uname -m` | `aarch64` | [PENDIENTE] |
-| Núcleos | `nproc` | `4` | [PENDIENTE] |
-| RAM | `free -h` | ~4 GB (3.7 GiB) | [PENDIENTE] |
-| Sistema | `cat /etc/os-release` | Debian 11 (bullseye) | [PENDIENTE] |
-| OTP | `erl -noshell -eval '...'` | 27 | [PENDIENTE] |
-| JIT | `erlang:system_info(emu_flavor)` | `jit` | [PENDIENTE] |
-| rebar3 | `rebar3 --version` | 3.x | [PENDIENTE] |
-| Proyecto | `rebar3 compile` | `Build successful` | [PENDIENTE] |
+| Arquitectura | `uname -m` | `aarch64` | `aarch64` |
+| Núcleos | `nproc` | `4` | `4` |
+| RAM | `free -h` | ~4 GB (3.7 GiB) | 3.7 GiB + 2.1 GiB swap |
+| Sistema | `cat /etc/os-release` | Debian 11 (bullseye) | Debian GNU/Linux 11 (bullseye) |
+| Kernel | `uname -r` | 5.10 | `5.10.92-v8+` |
+| OTP | `erl -noshell -eval '...'` | 27 | 27 (ERTS 15.2.7.14) |
+| JIT | `erlang:system_info(emu_flavor)` | `jit` | **`jit`** |
+| rebar3 | `rebar3 --version` | 3.x | 3.28.0 on Erlang/OTP 27 Erts 15.2.7.14 |
+| Proyecto | `rebar3 compile` | `Build successful` | Compilación exitosa |
 
 Las capturas y salidas completas están en [docs/06-evidencias.md](docs/06-evidencias.md).
 
@@ -145,5 +146,9 @@ físico para desarrollar con Erlang/OTP, aunque con diferencias importantes:
 la imagen disponible es Debian 11, no Debian 13, y el compilador es más
 antiguo que el que pide el GIST. La adaptación razonada de esos detalles fue
 parte central del ejercicio.
+
+**Resultado clave:** OTP 27.3.4.19 compiló correctamente y el **JIT quedó
+activo** (`emu_flavor = jit`) en la Raspberry Pi 5 virtual, con 4 schedulers y
+crypto AES por hardware.
 
 Ver la reflexión completa en [docs/09-reflexion.md](docs/09-reflexion.md).

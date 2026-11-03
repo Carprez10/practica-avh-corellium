@@ -64,6 +64,7 @@ evidencias/
 | 16 | Sesión de OpenCode | `evidencias/05-opencode.png` | ⬜ Pendiente |
 | 17 | Diagnóstico del 404 | `evidencias/05b-diagnostico.png` | ⬜ Pendiente |
 | 18 | Log completo | `evidencias/logs/aplicar_gist.log` | ⬜ Pendiente |
+| 19 | Resumen del script | `evidencias/texto/04-resumen-gist.txt` | ✅ Listo |
 
 ## 6.3 Cómo generar las salidas de texto
 

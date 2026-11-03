@@ -211,16 +211,16 @@ Resultado esperado: `true` en ambos casos.
 
 | Verificación | Resultado |
 |---|---|
-| `asdf --version` | [PENDIENTE] |
-| OTP Release | [PENDIENTE] |
-| ERTS | [PENDIENTE] |
-| `emu_flavor` | [PENDIENTE] |
-| `system_architecture` | [PENDIENTE] |
-| `schedulers_online` | [PENDIENTE] |
-| `rebar3 --version` | [PENDIENTE] |
-| `rebar3 compile` en `hello_erlang` | [PENDIENTE] |
-| AES-256-GCM | [PENDIENTE] |
-| ChaCha20-Poly1305 | [PENDIENTE] |
+| `asdf --version` | v0.14.1 (instalado por el script) |
+| OTP Release | 27 |
+| ERTS | 15.2.7.14 |
+| `emu_flavor` | **`jit`** |
+| `system_architecture` | `aarch64-unknown-linux-gnu` |
+| `schedulers_online` | 4 |
+| `rebar3 --version` | rebar 3.28.0 on Erlang/OTP 27 Erts 15.2.7.14 |
+| `rebar3 compile` en `hello_erlang` | Compilación exitosa |
+| AES-256-GCM | `true` |
+| ChaCha20-Poly1305 | [PENDIENTE: verificar] |
 
 ## 4.5 Evidencia
 
@@ -233,6 +233,7 @@ Resultado esperado: `true` en ambos casos.
 | rebar3 y `hello_erlang` | `evidencias/04e-rebar3.png` |
 | Crypto AES | `evidencias/04f-crypto.png` |
 | Log del script | `evidencias/logs/aplicar_gist.log` |
+| Resumen del script | `evidencias/texto/04-resumen-gist.txt` ✅ |
 
 > 📷 **Pendiente de captura.** El log se genera automáticamente en
 > `~/aplicar_gist_avh_<fecha>.log`; se copia a `evidencias/logs/` para anexarlo.
