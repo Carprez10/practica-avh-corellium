@@ -112,11 +112,15 @@ KERL_CONFIGURE_OPTIONS="--enable-native-libs \
   --disable-debug \
   --without-javac \
   --without-wx" \
+MAKEFLAGS="-j2" \
 asdf install erlang 27.3.4.19
 
 asdf global erlang 27.3.4.19
 asdf reshim erlang
 ```
+
+> `MAKEFLAGS="-j2"` limita la compilación a dos procesos. Es recomendable en
+> la instancia de 4 GB para no agotar la memoria durante el enlazado.
 
 Verificación:
 

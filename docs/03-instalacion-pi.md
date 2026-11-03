@@ -56,9 +56,14 @@ Resultados esperados:
 | `uname -a` | Linux ... aarch64 GNU/Linux |
 | `cat /etc/os-release` | `PRETTY_NAME="Raspberry Pi OS ... 11 (bullseye)"` |
 | `nproc` | `4` |
-| `free -h` | Memoria total cercana a 8 GB |
+| `free -h` | Memoria total cercana a 4 GB (3.7 GiB en la instancia usada) |
 | `df -h` | Espacio suficiente para compilar OTP (varios GB) |
 | `ip address` | Interfaz de red con dirección IP |
+
+> **Memoria:** la instancia usada tiene **4 GB (3.7 GiB visibles)**, no los
+> 8 GB del CM5 del GIST. Es suficiente para compilar OTP 27, pero conviene
+> limitar `make` a 2 jobs (`JOBS=2`) para evitar que el enlazador se quede sin
+> memoria. El script lo detecta automáticamente.
 
 Para comprobar la salida a Internet:
 

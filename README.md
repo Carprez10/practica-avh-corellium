@@ -25,7 +25,7 @@ El entorno final quedó funcionando sobre:
 | Elemento | Valor |
 |---|---|
 | Plataforma | Arm Virtual Hardware (Corellium) |
-| Dispositivo | Raspberry Pi 5 virtual, 4 núcleos, 8 GB RAM |
+| Dispositivo | Raspberry Pi 5 virtual, 4 núcleos, 4 GB RAM (3.7 GiB visibles) |
 | Sistema operativo | Raspberry Pi OS Desktop 11.2.0 (Debian 11 bullseye) |
 | Arquitectura | aarch64 |
 | Erlang/OTP | 27.3.4.19 |
@@ -71,7 +71,7 @@ El entorno final quedó funcionando sobre:
 |---|---|---|---|
 | Arquitectura | `uname -m` | `aarch64` | [PENDIENTE] |
 | Núcleos | `nproc` | `4` | [PENDIENTE] |
-| RAM | `free -h` | ~8 GB | [PENDIENTE] |
+| RAM | `free -h` | ~4 GB (3.7 GiB) | [PENDIENTE] |
 | Sistema | `cat /etc/os-release` | Debian 11 (bullseye) | [PENDIENTE] |
 | OTP | `erl -noshell -eval '...'` | 27 | [PENDIENTE] |
 | JIT | `erlang:system_info(emu_flavor)` | `jit` | [PENDIENTE] |

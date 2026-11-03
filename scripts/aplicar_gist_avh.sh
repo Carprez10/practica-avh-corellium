@@ -27,6 +27,7 @@ ASDF_VERSION="${ASDF_VERSION:-v0.14.1}"
 REBAR3_URL="${REBAR3_URL:-https://s3.amazonaws.com/rebar3/rebar3}"
 MODO_COMPILADOR="${MODO_COMPILADOR:-auto}"
 CONFIGURAR_SISTEMA="${CONFIGURAR_SISTEMA:-1}"
+JOBS="${JOBS:-}"
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_ROOT="$(cd "${SCRIPT_DIR}/.." && pwd)"
@@ -173,6 +174,19 @@ fi
 # 4. Compilar OTP 27 (con JIT si es posible)
 # -----------------------------------------------------------------------------
 step "4. Compilando Erlang/OTP ${OTP_VERSION}"
+
+# Limitar los jobs de make según la memoria disponible. En una instancia de
+# 4 GB conviene -j2 para evitar que el linker se quede sin memoria.
+if [ -z "${JOBS}" ]; then
+    MEM_MB="$(awk '/MemTotal/ {print int($2/1024)}' /proc/meminfo)"
+    if [ "${MEM_MB}" -lt 6000 ]; then
+        JOBS=2
+    else
+        JOBS="$(nproc)"
+    fi
+    info "RAM detectada: ${MEM_MB} MB. Jobs de compilación: ${JOBS}."
+fi
+export MAKEFLAGS="-j${JOBS}"
 
 OPCIONES_BASE="--enable-native-libs --enable-kernel-poll --disable-debug --without-javac --without-wx"
 

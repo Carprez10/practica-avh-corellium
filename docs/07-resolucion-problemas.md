@@ -248,7 +248,46 @@ sin adaptarlos habría generado errores de permisos.
 
 ---
 
-## 7.9 Resumen de autonomía
+## 7.9 Problema 9 — La instancia tiene 4 GB, no 8 GB
+
+### Síntoma
+
+`free -h` mostraba:
+
+```text
+Mem: 3.7Gi ...
+```
+
+El GIST asume un CM5 con 8 GB y la documentación inicial de AVH habla de
+8 GB, pero la instancia creada tiene 4 GB.
+
+### Diagnóstico
+
+AVH permite distintas configuraciones de memoria. La instancia usada se creó
+con 4 GB (3.7 GiB visibles). No es un error: es una variante válida.
+
+### Solución
+
+Compilar OTP con menos paralelismo para evitar que el enlazador agote la
+memoria:
+
+```bash
+MAKEFLAGS="-j2" asdf install erlang 27.3.4.19
+```
+
+El script `aplicar_gist_avh.sh` detecta la memoria y limita `make` a 2 jobs
+automáticamente cuando hay menos de 6 GB. También se puede añadir swap si el
+disco lo permite.
+
+### Lección
+
+La memoria es un recurso crítico al compilar. Ajustar `-j` según la RAM es más
+seguro que usar todos los núcleos a ciegas. Documentar la configuración real
+(4 GB) es más honesto que repetir el valor del GIST (8 GB).
+
+---
+
+## 7.10 Resumen de autonomía
 
 | Problema | ¿Se resolvió solo? | Fuente consultada |
 |---|---|---|
@@ -260,8 +299,9 @@ sin adaptarlos habría generado errores de permisos.
 | Trial | Sí, verificación en el panel | Documentación de AVH |
 | Core-hours | Sí, apagado responsable | Documentación de AVH |
 | systemd | Sí, se identificó como opcional | GIST |
+| RAM de 4 GB | Sí, límite de jobs y swap opcional | `free -h` y documentación de make |
 
-## 7.10 Lista de verificación
+## 7.11 Lista de verificación
 
 - [ ] Cada problema tiene síntoma, diagnóstico y solución.
 - [ ] Las soluciones se probaron en la Pi.
