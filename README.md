@@ -1,6 +1,6 @@
 # Práctica: instalación de Raspberry Pi virtual en Arm Virtual Hardware
 
-**Estudiante:** [Nombre del estudiante]
+**Estudiante:** Carlos Ivan Perez Lopez
 **Cuenta de GitHub:** Carprez10
 **Fecha:** 2 de noviembre de 2026
 **Repositorio:** <https://github.com/Carprez10/practica-avh-corellium>
