@@ -81,6 +81,8 @@ curl -I https://github.com
 | Datos del sistema | `evidencias/03c-uname.png` | `uname -a`, `nproc`, `free -h` |
 | Versión del SO | `evidencias/03d-os-release.png` | Debian 11 / Raspberry Pi OS 11.2.0 |
 | Red | `evidencias/03e-red.png` | `ip address` y `ping`/`curl` exitoso |
+| RAM y swap | `evidencias/03f-free-swap.png` | `free -h` con 3.7 GiB y swap |
+| Swap activo | `evidencias/03g-swap.png` | `Swap: 2.1Gi` |
 
 Las salidas de texto también se pueden guardar en archivos:
 
@@ -94,7 +96,7 @@ df -h                     > evidencias/texto/03-df.txt
 ip address                > evidencias/texto/03-ip.txt
 ```
 
-> 📷 **Pendiente de captura.**
+![free -h con 3.7 GiB de RAM y 2.1 GiB de swap](../evidencias/03f-free-swap.png)
 
 ## 3.5 Estabilidad de la instancia
 

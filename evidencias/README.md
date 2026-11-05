@@ -18,10 +18,15 @@ Aquí van las capturas, salidas de texto y logs de la práctica.
 ```text
 evidencias/
 ├── 01-cuenta-arm.png
+├── 02-demo-corellium.png
+├── 03f-free-swap.png
+├── 03g-swap.png
+├── 04d-jit.png
 ├── ...
 ├── logs/
 │   └── aplicar_gist.log
 └── texto/
     ├── 03-uname.txt
+    ├── 04-crypto.txt
     └── ...
 ```

@@ -81,6 +81,8 @@ El entorno final quedó funcionando sobre:
 | Crypto AES/ChaCha | `crypto:supports(ciphers)` | `true` | `true` / `true` |
 | Proyecto | `rebar3 compile` | `Build successful` | Compilación exitosa |
 
+![Resumen del GIST con OTP 27 y emu_flavor = jit](evidencias/04d-jit.png)
+
 Las capturas y salidas completas están en [docs/06-evidencias.md](docs/06-evidencias.md).
 
 ---

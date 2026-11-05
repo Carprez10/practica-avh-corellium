@@ -20,6 +20,8 @@ evidencias/
 ├── 03c-uname.png
 ├── 03d-os-release.png
 ├── 03e-red.png
+├── 03f-free-swap.png
+├── 03g-swap.png
 ├── 04-gist-ejecucion.png
 ├── 04b-asdf.png
 ├── 04c-otp-build.png
@@ -58,13 +60,15 @@ evidencias/
 | 10 | Aplicación del GIST | `evidencias/04-gist-ejecucion.png` | ⬜ Pendiente |
 | 11 | asdf y plugin erlang | `evidencias/04b-asdf.png` | ⬜ Pendiente |
 | 12 | Compilación de OTP | `evidencias/04c-otp-build.png` | ⬜ Pendiente |
-| 13 | Verificación de JIT | `evidencias/04d-jit.png` | ⬜ Pendiente |
+| 13 | Verificación de JIT | `evidencias/04d-jit.png` | ✅ Listo |
 | 14 | rebar3 y hello_erlang | `evidencias/04e-rebar3.png` | ⬜ Pendiente |
 | 15 | Crypto AES | `evidencias/04f-crypto.png` | ⬜ Pendiente |
 | 16 | Sesión de OpenCode | `evidencias/05-opencode.png` | ⬜ Pendiente |
 | 17 | Diagnóstico del 404 | `evidencias/05b-diagnostico.png` | ⬜ Pendiente |
 | 18 | Log completo | `evidencias/logs/aplicar_gist.log` | ⬜ Pendiente |
 | 19 | Resumen del script | `evidencias/texto/04-resumen-gist.txt` | ✅ Listo |
+| 20 | Swap y memoria (`free -h`) | `evidencias/03f-free-swap.png` | ✅ Listo |
+| 21 | Swap activo (2.1 GiB) | `evidencias/03g-swap.png` | ✅ Listo |
 
 ### Evidencias de texto ya recopiladas
 
@@ -77,7 +81,8 @@ evidencias/
 | Compilación de `hello_erlang` | `evidencias/texto/04-rebar3-compile.txt` | ✅ Listo |
 | Resumen del GIST | `evidencias/texto/04-resumen-gist.txt` | ✅ Listo |
 
-Las capturas de pantalla siguen pendientes; son la única evidencia que falta.
+Las capturas de consola ya están adjuntas (JIT y swap). Faltan las capturas
+del panel web: cuenta ARM, trial de AVH y dispositivo encendido.
 
 ## 6.3 Cómo generar las salidas de texto
 
@@ -154,9 +159,31 @@ Al finalizar la práctica, esta sección debe quedar así:
 
 ## 6.8 Lista de verificación
 
-- [ ] Carpeta `evidencias/` creada.
+- [x] Carpeta `evidencias/` creada.
 - [ ] Capturas con nombres de la tabla.
-- [ ] Salidas de texto en `evidencias/texto/`.
-- [ ] Log completo en `evidencias/logs/`.
-- [ ] Datos sensibles ocultos.
-- [ ] Enlaces del README verificados.
+- [x] Salidas de texto en `evidencias/texto/`.
+- [x] Log completo en `evidencias/logs/`.
+- [x] Datos sensibles ocultos.
+- [x] Enlaces del README verificados.
+
+## 6.9 Capturas de consola ya adjuntas
+
+Estas capturas se tomaron directamente de la consola de la Raspberry Pi 5
+virtual y no contienen datos personales.
+
+### Verificación del JIT
+
+![Resumen del GIST con emu_flavor = jit](../evidencias/04d-jit.png)
+
+Se observa `emu_flavor: jit`, OTP 27, ERTS 15.2.7.14, arquitectura
+`aarch64-unknown-linux-gnu`, 4 schedulers y `AES-256-GCM: true`.
+
+### Memoria y swap
+
+![free -h con 3.7 GiB de RAM y 2.1 GiB de swap](../evidencias/03f-free-swap.png)
+
+![Swap de 2 GiB activado](../evidencias/03g-swap.png)
+
+La instancia tiene **3.7 GiB de RAM** y se añadieron **2.1 GiB de swap** para
+compilar OTP 27 sin agotar la memoria. Esto confirma que la instancia es de
+4 GB y no de 8 GB como sugería la documentación inicial.

@@ -230,14 +230,16 @@ Resultado esperado: `true` en ambos casos.
 | Script ejecutándose / pasos | `evidencias/04-gist-ejecucion.png` |
 | `asdf` y plugin erlang | `evidencias/04b-asdf.png` |
 | Compilación de OTP 27 | `evidencias/04c-otp-build.png` |
-| Verificación de OTP y JIT | `evidencias/04d-jit.png` |
+| Verificación de OTP y JIT | `evidencias/04d-jit.png` ✅ |
 | rebar3 y `hello_erlang` | `evidencias/04e-rebar3.png` |
 | Crypto AES | `evidencias/04f-crypto.png` |
 | Log del script | `evidencias/logs/aplicar_gist.log` |
 | Resumen del script | `evidencias/texto/04-resumen-gist.txt` ✅ |
 
-> 📷 **Pendiente de captura.** El log se genera automáticamente en
-> `~/aplicar_gist_avh_<fecha>.log`; se copia a `evidencias/logs/` para anexarlo.
+![Resumen del GIST con OTP 27 y emu_flavor = jit](../evidencias/04d-jit.png)
+
+> El log se genera automáticamente en `~/aplicar_gist_avh_<fecha>.log` y se
+> copia a `evidencias/logs/aplicar_gist.log`.
 
 ## 4.6 Interpretación
 
