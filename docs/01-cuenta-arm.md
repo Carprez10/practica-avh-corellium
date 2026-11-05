@@ -34,14 +34,17 @@ una cuenta verificada, AVH no permite iniciar sesión por SSO.
 
 ## 1.3 Evidencia
 
-| Evidencia | Archivo | Qué debe verse |
+| Evidencia | Archivo | Estado |
 |---|---|---|
-| Cuenta creada y verificada | `evidencias/01-cuenta-arm.png` | Panel de la cuenta ARM con el correo oculto y el estado verificado |
-| Acceso a AVH por SSO | `evidencias/01b-acceso-avh.png` | Pantalla de AVH ya autenticada |
-| Propósito de la plataforma | `evidencias/01c-arm-developer.png` | Página principal de developer.arm.com o sección de documentación |
+| Cuenta creada y verificada | `evidencias/01-cuenta-arm.png` | ➖ No disponible |
+| Acceso a AVH por SSO | `evidencias/01b-acceso-avh.png` | ➖ No disponible |
+| Propósito de la plataforma | `evidencias/01c-arm-developer.png` | ➖ No disponible |
 
-> 📷 **Pendiente de captura.** Sustituir estas notas por las imágenes cuando
-> estén disponibles.
+> **Nota de honestidad:** no se adjuntan capturas de la cuenta porque la
+> sesión del navegador ya no estaba abierta cuando se cerró la práctica. El
+> acceso quedó demostrado de forma indirecta: la instancia de AVH se creó y se
+> usó durante toda la actividad. No se publica ningún dato personal de la
+> cuenta.
 
 ## 1.4 Reflexión breve
 
@@ -52,8 +55,9 @@ fue importante entender que el trial es personal y no debe compartirse.
 
 ## 1.5 Lista de verificación
 
-- [ ] Cuenta creada en `developer.arm.com`.
-- [ ] Correo verificado.
-- [ ] MFA activado (recomendado).
-- [ ] Acceso a AVH con SSO comprobado.
-- [ ] Capturas con datos sensibles ocultos.
+- [x] Cuenta creada en `developer.arm.com`.
+- [x] Correo verificado.
+- [ ] MFA (recomendado; no se verificó en esta práctica).
+- [x] Acceso a AVH con SSO comprobado (se creó y usó la instancia).
+- [x] Sin datos sensibles publicados.
+- [ ] Capturas de la cuenta (no disponibles).

@@ -38,6 +38,10 @@ La Raspberry Pi 5 virtual usa **4 núcleos**. Por eso, si se deja encendida:
 Es decir, el trial alcanza para unas **25 horas reales** con la Pi encendida.
 Apagar la instancia cuando no se usa es parte de la buena gestión del recurso.
 
+> En esta práctica no se anotaron los días ni los core-hours exactos que
+> mostraba el panel. La cifra de 25 horas es el cálculo teórico según las
+> condiciones públicas del trial, no una medición de esta instancia.
+
 ## 2.3 Cómo verificar que la demo está activa
 
 1. Entrar a <https://app.avh.corellium.com>.
@@ -62,15 +66,16 @@ Apagar la instancia cuando no se usa es parte de la buena gestión del recurso.
 
 ## 2.4 Evidencia
 
-| Evidencia | Archivo | Qué debe verse |
+| Evidencia | Archivo | Estado |
 |---|---|---|
-| Panel de AVH con el trial | `evidencias/02-demo-corellium.png` | Estado del trial, días restantes o core-hours |
-| Dispositivo Raspberry Pi 5 creado | `evidencias/02b-dispositivo.png` | Lista de dispositivos con la Pi 5 |
-| Consumo o suscripción | `evidencias/02c-consumo.png` | Core-hours usados/disponibles |
+| Panel de AVH con el trial | `evidencias/02-demo-corellium.png` | ➖ No disponible |
+| Dispositivo Raspberry Pi 5 creado | `evidencias/02b-dispositivo.png` | ➖ No disponible |
+| Consumo o suscripción | `evidencias/02c-consumo.png` | ➖ No disponible |
 
-> 📷 **Pendiente de captura.** Si no aparece la palabra “Trial”, sirve una
-> captura del panel con la cuenta activa y la posibilidad de crear dispositivos,
-> más otra de la sección de suscripción.
+> **Nota de honestidad:** el trial estuvo operativo, como demuestra la creación
+> y el uso de la instancia durante toda la práctica. Sin embargo, no se
+> registraron los días restantes ni los core-hours exactos antes de apagar la
+> instancia, y no se adjuntan capturas del panel. No se inventan cifras.
 
 ## 2.5 Apagado responsable
 
@@ -98,8 +103,8 @@ dejarla encendida mientras se redactaba la documentación.
 
 ## 2.7 Lista de verificación
 
-- [ ] Trial de 30 días localizado en el panel.
-- [ ] Core-hours y días restantes documentados.
-- [ ] Dispositivo Raspberry Pi 5 visible.
-- [ ] Capturas obtenidas.
-- [ ] Instancia apagada al finalizar.
+- [x] Trial operativo (se creó y usó la instancia).
+- [ ] Core-hours y días restantes documentados (no registrados).
+- [x] Dispositivo Raspberry Pi 5 visible y funcional.
+- [ ] Capturas obtenidas (no disponibles).
+- [x] Instancia apagada al finalizar.

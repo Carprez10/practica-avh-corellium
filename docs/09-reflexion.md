@@ -123,7 +123,9 @@ las diferencias.
 2. **Reservar tiempo para la compilación de OTP.** En AVH puede tardar entre
    30 y 90 minutos; conviene lanzarla y hacer otras tareas mientras tanto.
 3. **Capturar evidencias durante el proceso, no al final.** Es fácil olvidar
-   una pantalla o un comando.
+   una pantalla o un comando. En esta entrega solo se conservaron tres
+   capturas de consola; las del panel web y el log completo se perdieron al
+   apagar la instancia. Esa experiencia justifica la recomendación.
 4. **Probar primero el respaldo sin JIT.** Así se garantiza un entorno
    funcional aunque el JIT falle.
 5. **Documentar las decisiones, no solo los comandos.** El valor está en

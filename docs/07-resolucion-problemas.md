@@ -301,15 +301,15 @@ seguro que usar todos los núcleos a ciegas. Documentar la configuración real
 | gcc 10 vs 11 | Sí, con respaldo documentado | Foro de Erlang + GIST |
 | rebar3 ausente | Sí, descarga oficial | GIST y rebar3.org |
 | CM5 vs AVH | Sí, comparación de entornos | Video y documentación de AVH |
-| Trial | Sí, verificación en el panel | Documentación de AVH |
+| Trial | Sí, la instancia se creó y funcionó | Documentación de AVH |
 | Core-hours | Sí, apagado responsable | Documentación de AVH |
 | systemd | Sí, se identificó como opcional | GIST |
 | RAM de 4 GB | Sí, límite de jobs y swap opcional | `free -h` y documentación de make |
 
 ## 7.11 Lista de verificación
 
-- [ ] Cada problema tiene síntoma, diagnóstico y solución.
-- [ ] Las soluciones se probaron en la Pi.
-- [ ] Se citan fuentes cuando corresponde.
-- [ ] Se explica qué se aprendió.
-- [ ] Se distingue entre error del entorno y error propio.
+- [x] Cada problema tiene síntoma, diagnóstico y solución.
+- [x] Las soluciones se probaron en la Pi.
+- [x] Se citan fuentes cuando corresponde.
+- [x] Se explica qué se aprendió.
+- [x] Se distingue entre error del entorno y error propio.

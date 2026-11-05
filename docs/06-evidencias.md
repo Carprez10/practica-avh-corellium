@@ -11,64 +11,50 @@ coincide con el criterio de la rúbrica:
 
 ```text
 evidencias/
-├── 01-cuenta-arm.png
-├── 01b-acceso-avh.png
-├── 02-demo-corellium.png
-├── 02b-dispositivo.png
-├── 03-pi-encendida.png
-├── 03b-consola.png
-├── 03c-uname.png
-├── 03d-os-release.png
-├── 03e-red.png
 ├── 03f-free-swap.png
 ├── 03g-swap.png
-├── 04-gist-ejecucion.png
-├── 04b-asdf.png
-├── 04c-otp-build.png
 ├── 04d-jit.png
-├── 04e-rebar3.png
-├── 04f-crypto.png
-├── 05-opencode.png
-├── 05b-diagnostico.png
-├── 06-logs.png
-├── logs/
-│   └── aplicar_gist.log
+├── README.md
 └── texto/
-    ├── 03-uname.txt
-    ├── 03-os-release.txt
-    ├── 03-nproc.txt
-    ├── 03-free.txt
-    ├── 03-df.txt
-    ├── 04-otp.txt
-    ├── 04-jit.txt
-    └── 04-rebar3.txt
+    ├── 04-crypto.txt
+    ├── 04-erl-version.txt
+    ├── 04-gcc.txt
+    ├── 04-rebar3-compile.txt
+    ├── 04-rebar3-version.txt
+    └── 04-resumen-gist.txt
 ```
+
+> **Alcance real de las evidencias.** La entrega incluye **tres capturas de
+> consola** y **seis salidas de texto**. No se incluyen capturas del panel web
+> de AVH (cuenta ARM, trial, lista de dispositivos) ni el log completo, porque
+> la instancia se apagó antes de recuperarlos. Esta limitación se documenta de
+> forma explícita en lugar de simular evidencias que no existen.
 
 ## 6.2 Lista de evidencias
 
 | # | Evidencia | Archivo | Estado |
 |---|---|---|---|
-| 1 | Cuenta ARM verificada | `evidencias/01-cuenta-arm.png` | ⬜ Pendiente |
-| 2 | Acceso a AVH por SSO | `evidencias/01b-acceso-avh.png` | ⬜ Pendiente |
-| 3 | Trial de 30 días | `evidencias/02-demo-corellium.png` | ⬜ Pendiente |
-| 4 | Dispositivo Raspberry Pi 5 | `evidencias/02b-dispositivo.png` | ⬜ Pendiente |
-| 5 | Pi encendida en AVH | `evidencias/03-pi-encendida.png` | ⬜ Pendiente |
-| 6 | Consola de la Pi | `evidencias/03b-consola.png` | ⬜ Pendiente |
-| 7 | `uname`, `nproc`, `free` | `evidencias/03c-uname.png` | ⬜ Pendiente |
-| 8 | Versión de Debian | `evidencias/03d-os-release.png` | ⬜ Pendiente |
-| 9 | Red funcionando | `evidencias/03e-red.png` | ⬜ Pendiente |
-| 10 | Aplicación del GIST | `evidencias/04-gist-ejecucion.png` | ⬜ Pendiente |
-| 11 | asdf y plugin erlang | `evidencias/04b-asdf.png` | ⬜ Pendiente |
-| 12 | Compilación de OTP | `evidencias/04c-otp-build.png` | ⬜ Pendiente |
-| 13 | Verificación de JIT | `evidencias/04d-jit.png` | ✅ Listo |
-| 14 | rebar3 y hello_erlang | `evidencias/04e-rebar3.png` | ⬜ Pendiente |
-| 15 | Crypto AES | `evidencias/04f-crypto.png` | ⬜ Pendiente |
-| 16 | Sesión de OpenCode | `evidencias/05-opencode.png` | ⬜ Pendiente |
-| 17 | Diagnóstico del 404 | `evidencias/05b-diagnostico.png` | ⬜ Pendiente |
-| 18 | Log completo | `evidencias/logs/aplicar_gist.log` | ⬜ Pendiente |
-| 19 | Resumen del script | `evidencias/texto/04-resumen-gist.txt` | ✅ Listo |
-| 20 | Swap y memoria (`free -h`) | `evidencias/03f-free-swap.png` | ✅ Listo |
-| 21 | Swap activo (2.1 GiB) | `evidencias/03g-swap.png` | ✅ Listo |
+| 1 | Cuenta ARM verificada | `evidencias/01-cuenta-arm.png` | ➖ No disponible |
+| 2 | Acceso a AVH por SSO | `evidencias/01b-acceso-avh.png` | ➖ No disponible |
+| 3 | Trial de 30 días | `evidencias/02-demo-corellium.png` | ➖ No disponible |
+| 4 | Dispositivo Raspberry Pi 5 | `evidencias/02b-dispositivo.png` | ➖ No disponible |
+| 5 | Pi encendida en AVH | `evidencias/03-pi-encendida.png` | ➖ No disponible |
+| 6 | Consola de la Pi | `evidencias/03b-consola.png` | ➖ No disponible |
+| 7 | `uname`, `nproc`, `free` | `evidencias/03c-uname.png` | ➖ Parcial (ver `03f`) |
+| 8 | Versión de Debian | `evidencias/03d-os-release.png` | ➖ Sustituida por texto |
+| 9 | Red funcionando | `evidencias/03e-red.png` | ➖ No disponible |
+| 10 | Aplicación del GIST | `evidencias/04-gist-ejecucion.png` | ➖ No disponible |
+| 11 | asdf y plugin erlang | `evidencias/04b-asdf.png` | ➖ No disponible |
+| 12 | Compilación de OTP | `evidencias/04c-otp-build.png` | ➖ Sustituida por resumen |
+| 13 | Verificación de JIT | `evidencias/04d-jit.png` | ✅ Incluida |
+| 14 | rebar3 y hello_erlang | `evidencias/04e-rebar3.png` | ➖ Sustituida por texto |
+| 15 | Crypto AES | `evidencias/04f-crypto.png` | ➖ Sustituida por texto |
+| 16 | Sesión de OpenCode | `evidencias/05-opencode.png` | ➖ No disponible |
+| 17 | Diagnóstico del 404 | `evidencias/05b-diagnostico.png` | ➖ Documentado en `07` |
+| 18 | Log completo | `evidencias/logs/aplicar_gist.log` | ➖ No recuperado |
+| 19 | Resumen del script | `evidencias/texto/04-resumen-gist.txt` | ✅ Incluido |
+| 20 | Swap y memoria (`free -h`) | `evidencias/03f-free-swap.png` | ✅ Incluida |
+| 21 | Swap activo (2.1 GiB) | `evidencias/03g-swap.png` | ✅ Incluida |
 
 ### Evidencias de texto ya recopiladas
 
@@ -81,8 +67,15 @@ evidencias/
 | Compilación de `hello_erlang` | `evidencias/texto/04-rebar3-compile.txt` | ✅ Listo |
 | Resumen del GIST | `evidencias/texto/04-resumen-gist.txt` | ✅ Listo |
 
-Las capturas de consola ya están adjuntas (JIT y swap). Faltan las capturas
-del panel web: cuenta ARM, trial de AVH y dispositivo encendido.
+Las capturas de consola adjuntas son las tres únicas disponibles. Las
+capturas del panel web (cuenta ARM, trial, dispositivo) no se tomaron antes de
+apagar la instancia, y el log completo quedó en el disco de la Pi virtual.
+Ambas ausencias se declaran aquí para que la entrega sea verificable y honesta:
+lo que no existe no se presenta como si existiera.
+
+La evidencia técnica principal se conserva en texto: el resumen del script, las
+versiones de Erlang y rebar3, la comprobación de AES/ChaCha, la versión de gcc y
+la compilación de `hello_erlang`.
 
 ## 6.3 Cómo generar las salidas de texto
 
@@ -120,23 +113,22 @@ rebar3 --version          | tee evidencias/texto/04-rebar3.txt
 5. Recorta o difumina correo, identificadores de cuenta, tokens y cookies.
 6. Usa PNG para capturas y TXT para salidas de terminal.
 
-## 6.5 Cómo copiar las capturas al repositorio
+## 6.5 Cómo se copiaron las capturas al repositorio
 
-Desde la máquina local, con las capturas descargadas:
+Las tres capturas se copiaron desde la carpeta de Windows accesible por WSL:
 
 ```bash
-cd /ruta/al/repositorio/practica-avh-corellium
-cp ~/Descargas/cuenta-arm.png        evidencias/01-cuenta-arm.png
-cp ~/Descargas/demo-corellium.png    evidencias/02-demo-corellium.png
-# ...
+cd /home/carprez/practica-avh-corellium
+cp "/mnt/c/Users/Admin/OneDrive/Pictures/Screenshots/Captura de pantalla 2026-11-02 233721.png" evidencias/04d-jit.png
+cp "/mnt/c/Users/Admin/OneDrive/Pictures/Screenshots/Captura de pantalla 2026-11-02 232001.png" evidencias/03f-free-swap.png
+cp "/mnt/c/Users/Admin/OneDrive/Pictures/Screenshots/Captura de pantalla 2026-11-02 231943.png" evidencias/03g-swap.png
 git add evidencias
-git commit -m "Evidencias de la práctica AVH"
+git commit -m "Adjuntar capturas de consola"
 git push
 ```
 
-Si se trabaja desde la Pi, se pueden subir con la pestaña **Files** de AVH o
-por SCP, y luego hacer `git add`/`commit`/`push` desde la Pi (con una llave o
-token configurado fuera del repositorio).
+Si en el futuro se dispone de las capturas del panel web, se pueden añadir con
+los nombres de la tabla. En esta entrega no existen y por eso no se enlazan.
 
 ## 6.6 Evidencias que no deben publicarse
 
@@ -152,18 +144,22 @@ add`. Ver [08-seguridad.md](08-seguridad.md).
 
 ## 6.7 Estado de las evidencias
 
-Al finalizar la práctica, esta sección debe quedar así:
+La entrega quedó cerrada con este alcance:
 
-> Todas las evidencias de la tabla están adjuntas en `evidencias/` y los
-> resultados coinciden con las tablas de [04-aplicacion-gist.md](04-aplicacion-gist.md).
+> Se adjuntan tres capturas de consola (`04d-jit.png`, `03f-free-swap.png` y
+> `03g-swap.png`) y seis salidas de texto. Los resultados coinciden con las
+> tablas de [04-aplicacion-gist.md](04-aplicacion-gist.md). Las capturas del
+> panel web y el log completo no se recuperaron porque la instancia de AVH se
+> apagó al terminar la práctica.
 
 ## 6.8 Lista de verificación
 
 - [x] Carpeta `evidencias/` creada.
-- [ ] Capturas con nombres de la tabla.
+- [x] Capturas de consola adjuntas con nombres claros.
 - [x] Salidas de texto en `evidencias/texto/`.
-- [x] Log completo en `evidencias/logs/`.
-- [x] Datos sensibles ocultos.
+- [ ] Log completo en `evidencias/logs/` (no recuperado).
+- [x] Datos sensibles revisados: las capturas no muestran correo, tokens ni
+      contraseñas.
 - [x] Enlaces del README verificados.
 
 ## 6.9 Capturas de consola ya adjuntas

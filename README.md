@@ -83,7 +83,12 @@ El entorno final quedó funcionando sobre:
 
 ![Resumen del GIST con OTP 27 y emu_flavor = jit](evidencias/04d-jit.png)
 
-Las capturas y salidas completas están en [docs/06-evidencias.md](docs/06-evidencias.md).
+**Alcance de las evidencias:** se conservan **tres capturas de consola** (JIT,
+memoria y swap) y **seis salidas de texto** (versiones, crypto, gcc, compilación
+y resumen). No se incluyen capturas del panel web de AVH ni el log completo,
+porque la instancia se apagó antes de recuperarlos; esa ausencia se declara en
+[docs/06-evidencias.md](docs/06-evidencias.md) y no se sustituye con imágenes
+inventadas.
 
 ---
 
@@ -135,9 +140,9 @@ El detalle completo está en [docs/07-resolucion-problemas.md](docs/07-resolucio
 
 - No se publican correos completos, tokens, cookies, contraseñas ni llaves SSH.
 - Las capturas con datos personales se recortan o difuminan.
-- La contraseña por defecto de la imagen (`pi` / `raspberry`) se cambió y no se
-  reutiliza en otros servicios.
-- La instancia de AVH se apaga al terminar para no consumir core-hours.
+- Se recomienda cambiar la contraseña por defecto de la imagen (`pi` /
+  `raspberry`); en esta práctica no se verificó ese cambio.
+- La instancia de AVH se apagó al terminar para no consumir core-hours.
 
 Ver [docs/08-seguridad.md](docs/08-seguridad.md).
 

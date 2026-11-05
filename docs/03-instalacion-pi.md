@@ -74,15 +74,15 @@ curl -I https://github.com
 
 ## 3.4 Evidencia
 
-| Evidencia | Archivo | Qué debe verse |
+| Evidencia | Archivo | Estado |
 |---|---|---|
-| Dispositivo encendido | `evidencias/03-pi-encendida.png` | Panel de AVH con la Pi 5 en estado `on` |
-| Escritorio o consola | `evidencias/03b-consola.png` | Prompt `pi@raspberrypi` |
-| Datos del sistema | `evidencias/03c-uname.png` | `uname -a`, `nproc`, `free -h` |
-| Versión del SO | `evidencias/03d-os-release.png` | Debian 11 / Raspberry Pi OS 11.2.0 |
-| Red | `evidencias/03e-red.png` | `ip address` y `ping`/`curl` exitoso |
-| RAM y swap | `evidencias/03f-free-swap.png` | `free -h` con 3.7 GiB y swap |
-| Swap activo | `evidencias/03g-swap.png` | `Swap: 2.1Gi` |
+| Dispositivo encendido | `evidencias/03-pi-encendida.png` | ➖ No disponible (instancia apagada) |
+| Escritorio o consola | `evidencias/03b-consola.png` | ➖ No disponible |
+| Datos del sistema | `evidencias/03c-uname.png` | ➖ Parcial: arquitectura y núcleos en `04d-jit.png` |
+| Versión del SO | `evidencias/03d-os-release.png` | ➖ Sustituida por el resumen de texto |
+| Red | `evidencias/03e-red.png` | ➖ No disponible |
+| RAM y swap | `evidencias/03f-free-swap.png` | ✅ Incluida |
+| Swap activo | `evidencias/03g-swap.png` | ✅ Incluida |
 
 Las salidas de texto también se pueden guardar en archivos:
 
@@ -119,11 +119,11 @@ compilación de OTP, que es la parte más costosa en tiempo.
 
 ## 3.7 Lista de verificación
 
-- [ ] Dispositivo Raspberry Pi 5 creado.
-- [ ] Firmware Raspberry Pi OS Desktop 11.2.0.
-- [ ] Consola accesible con `pi`.
-- [ ] `uname -m` = `aarch64`.
-- [ ] `nproc` = 4.
-- [ ] Memoria y disco verificados.
-- [ ] Red verificada.
-- [ ] Capturas y salidas guardadas.
+- [x] Dispositivo Raspberry Pi 5 creado.
+- [x] Firmware Raspberry Pi OS Desktop 11.2.0.
+- [x] Consola accesible con `pi`.
+- [x] `uname -m` = `aarch64` (visible en `04d-jit.png`).
+- [x] `nproc` = 4 (visible en `04d-jit.png` como 4 schedulers).
+- [x] Memoria y disco verificados (`free -h` y `df -h`).
+- [x] Red verificada (clonación de GitHub y descarga de asdf/rebar3).
+- [x] Capturas de consola y salidas guardadas (3 capturas y 6 textos).

@@ -74,14 +74,16 @@ Reconocer esos límites fue parte del uso responsable de la herramienta.
 
 ## 5.6 Evidencia
 
-| Evidencia | Archivo | Qué debe verse |
+| Evidencia | Archivo | Estado |
 |---|---|---|
-| Sesión de OpenCode | `evidencias/05-opencode.png` | La conversación o el panel de OpenCode |
-| Diagnóstico del 404 | `evidencias/05b-diagnostico.png` | El error y la explicación |
-| Script generado | `evidencias/05c-script.png` | `scripts/aplicar_gist_avh.sh` en el editor |
+| Sesión de OpenCode | `evidencias/05-opencode.png` | ➖ No disponible |
+| Diagnóstico del 404 | `evidencias/05b-diagnostico.png` | ➖ Documentado en `07` |
+| Script generado | `evidencias/05c-script.png` | ✅ Ver `scripts/aplicar_gist_avh.sh` |
 
-> 📷 **Pendiente de captura.** Se recomienda capturar la sesión donde se
-> resolvió el error de `apt` y la que generó el script.
+> **Nota de honestidad:** no se adjunta captura de la sesión de OpenCode. El
+> resultado del trabajo sí es verificable en el repositorio: el script
+> `scripts/aplicar_gist_avh.sh`, la documentación de los errores y los
+> resultados reales de la Pi.
 
 ## 5.7 Reflexión breve
 
@@ -93,7 +95,7 @@ con la salida real.
 
 ## 5.8 Lista de verificación
 
-- [ ] Captura de la sesión de OpenCode.
-- [ ] Ejemplo de un error resuelto con ayuda de OpenCode.
-- [ ] Explicación de los límites de la herramienta.
-- [ ] Relación entre las sugerencias y los comandos ejecutados.
+- [ ] Captura de la sesión de OpenCode (no disponible).
+- [x] Ejemplo de un error resuelto con ayuda de OpenCode (404 de `apt`).
+- [x] Explicación de los límites de la herramienta.
+- [x] Relación entre las sugerencias y los comandos ejecutados.

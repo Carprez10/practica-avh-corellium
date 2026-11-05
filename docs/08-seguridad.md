@@ -96,13 +96,15 @@ _build/
 
 ## 8.7 Evidencia
 
-| Evidencia | Archivo | Qué debe verse |
+| Evidencia | Archivo | Estado |
 |---|---|---|
-| Captura con datos difuminados | `evidencias/08-captura-segura.png` | Ejemplo de una captura publicada sin correo ni ID |
-| `.gitignore` | `evidencias/08b-gitignore.png` | Reglas de exclusión |
+| Capturas revisadas | `evidencias/04d-jit.png`, `03f-free-swap.png`, `03g-swap.png` | ✅ Sin datos personales |
+| `.gitignore` | `.gitignore` | ✅ Reglas de exclusión versionadas |
+| Token o contraseña | — | ➖ No se capturaron, por diseño |
 
-> 📷 **Pendiente de captura.** No se debe capturar la pantalla de contraseña
-> ni el token.
+> **Nota:** no existe una captura de “datos difuminados” porque las tres
+> capturas incluidas son de consola y no contienen correo, tokens ni
+> identificadores de cuenta. La revisión se hizo antes de publicarlas.
 
 ## 8.8 Reflexión breve
 
@@ -113,10 +115,10 @@ instancia es parte de un uso responsable, no solo de un ahorro personal.
 
 ## 8.9 Lista de verificación
 
-- [ ] Cuenta ARM con contraseña única.
-- [ ] MFA activado.
-- [ ] Contraseña de la Pi cambiada.
-- [ ] Sin tokens ni llaves privadas en el repo.
-- [ ] Capturas revisadas y difuminadas.
-- [ ] Instancia apagada al terminar.
-- [ ] Trial usado de forma ética.
+- [ ] Cuenta ARM con contraseña única (no verificable desde el repo).
+- [ ] MFA activado (no verificado).
+- [ ] Contraseña de la Pi cambiada (no verificado).
+- [x] Sin tokens ni llaves privadas en el repo.
+- [x] Capturas revisadas (sin datos personales).
+- [x] Instancia apagada al terminar.
+- [x] Trial usado de forma ética.

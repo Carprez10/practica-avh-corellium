@@ -225,21 +225,22 @@ Resultado esperado: `true` en ambos casos.
 
 ## 4.5 Evidencia
 
-| Evidencia | Archivo |
-|---|---|
-| Script ejecutándose / pasos | `evidencias/04-gist-ejecucion.png` |
-| `asdf` y plugin erlang | `evidencias/04b-asdf.png` |
-| Compilación de OTP 27 | `evidencias/04c-otp-build.png` |
-| Verificación de OTP y JIT | `evidencias/04d-jit.png` ✅ |
-| rebar3 y `hello_erlang` | `evidencias/04e-rebar3.png` |
-| Crypto AES | `evidencias/04f-crypto.png` |
-| Log del script | `evidencias/logs/aplicar_gist.log` |
-| Resumen del script | `evidencias/texto/04-resumen-gist.txt` ✅ |
+| Evidencia | Archivo | Estado |
+|---|---|---|
+| Script ejecutándose / pasos | `evidencias/04-gist-ejecucion.png` | ➖ No disponible |
+| `asdf` y plugin erlang | `evidencias/04b-asdf.png` | ➖ No disponible |
+| Compilación de OTP 27 | `evidencias/04c-otp-build.png` | ➖ Sustituida por el resumen |
+| Verificación de OTP y JIT | `evidencias/04d-jit.png` | ✅ Incluida |
+| rebar3 y `hello_erlang` | `evidencias/04e-rebar3.png` | ➖ Sustituida por texto |
+| Crypto AES | `evidencias/04f-crypto.png` | ➖ Sustituida por texto |
+| Log del script | `evidencias/logs/aplicar_gist.log` | ➖ No recuperado |
+| Resumen del script | `evidencias/texto/04-resumen-gist.txt` | ✅ Incluido |
 
 ![Resumen del GIST con OTP 27 y emu_flavor = jit](../evidencias/04d-jit.png)
 
-> El log se genera automáticamente en `~/aplicar_gist_avh_<fecha>.log` y se
-> copia a `evidencias/logs/aplicar_gist.log`.
+> El script genera el log en `~/aplicar_gist_avh_<fecha>.log`. En esta entrega
+> el log completo no se recuperó antes de apagar la instancia; el resumen del
+> script sí se conserva y es la evidencia principal de la ejecución.
 
 ## 4.6 Interpretación
 
@@ -256,13 +257,14 @@ fallado en el primer `apt install`.
 
 ## 4.7 Lista de verificación
 
-- [ ] Repositorios de Debian 11 corregidos.
-- [ ] Dependencias instaladas.
-- [ ] `asdf` v0.14.1 instalado.
-- [ ] Plugin `erlang` agregado.
-- [ ] OTP 27.3.4.19 compilado.
-- [ ] `emu_flavor` verificado.
-- [ ] `rebar3` instalado.
-- [ ] `hello_erlang` creado y compilado.
-- [ ] Crypto AES verificado.
-- [ ] Log y capturas guardados.
+- [x] Repositorios de Debian 11 corregidos.
+- [x] Dependencias instaladas.
+- [x] `asdf` v0.14.1 instalado.
+- [x] Plugin `erlang` agregado.
+- [x] OTP 27.3.4.19 compilado.
+- [x] `emu_flavor` verificado (`jit`).
+- [x] `rebar3` instalado (3.28.0).
+- [x] `hello_erlang` creado y compilado.
+- [x] Crypto AES y ChaCha20 verificados.
+- [x] Captura del resumen y salidas de texto guardadas.
+- [ ] Log completo y capturas intermedias (no recuperados).
